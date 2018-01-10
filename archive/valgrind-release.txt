@@ -1,0 +1,45 @@
+make[1]: Entering directory '/home/does/Desktop/ProjectC'
+G_SLICE=always-malloc G_DEBUG=gc-friendly valgrind --tool=memcheck --leak-check=full --track-origins=yes --suppressions=make/valgrind-suppressions.txt  --gen-suppressions=no release/facturation disable-gui  2>&1
+==5419== Memcheck, a memory error detector
+==5419== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==5419== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==5419== Command: release/facturation disable-gui
+==5419== 
+Running preliminary unit test... (specify verbose-unittests for details)
+  Testing MyString (disable with disable-unit-MyString)................
+  Testing EncryptDecrypt (disable with disable-unit-EncryptDecrypt).
+  Testing OperatorTable (disable with disable-unit-OperatorTable)......
+  Testing CatalogRecord (disable with disable-unit-CatalogRecord)...
+  Testing CatalogDB (disable with disable-unit-CatalogDB)....
+  Testing CustomerRecord (disable with disable-unit-CustomerRecord)...
+  Testing CustomerDB (disable with disable-unit-CustomerDB)....
+  Testing DocumentUtil (disable with disable-unit-DocumentUtil)...
+  Testing DocumentRowList (disable with disable-unit-DocumentRowList).....
+  Testing Document (disable with disable-unit-Document).
+  Testing PrintFormat (disable with disable-unit-PrintFormat).
+  Testing Dictionary (disable with disable-unit-Dictionary)..
+Great ! Unit tests passed !
+
+Registry dump started (reduce verbosity with reduce-dump-usage or hide with disable-dump-usage)
+Registry dump done
+
+Registry dump by file name (hide with disable-dump-usage)
+Registry dump by file name done
+
+==5419== 
+==5419== HEAP SUMMARY:
+==5419==     in use at exit: 49,212 bytes in 238 blocks
+==5419==   total heap usage: 2,516 allocs, 2,278 frees, 798,324 bytes allocated
+==5419== 
+==5419== LEAK SUMMARY:
+==5419==    definitely lost: 0 bytes in 0 blocks
+==5419==    indirectly lost: 0 bytes in 0 blocks
+==5419==      possibly lost: 0 bytes in 0 blocks
+==5419==    still reachable: 0 bytes in 0 blocks
+==5419==                       of which reachable via heuristic:
+==5419==                         newarray           : 1,536 bytes in 16 blocks
+==5419==         suppressed: 49,212 bytes in 238 blocks
+==5419== 
+==5419== For counts of detected and suppressed errors, rerun with: -v
+==5419== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 18 from 18)
+make[1]: Leaving directory '/home/does/Desktop/ProjectC'
