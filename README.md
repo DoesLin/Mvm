@@ -6,7 +6,7 @@ Applique l'algorithme MVM.
   
   Et enfin affiche la meilleure sous-sÈquence B' de B, la plus proche de la sÈquence A.
   
-  EntrÈe:
+  Entrée:
     * La sÈquence A dans un tableau d'entiers.
     * La sÈquence B dans un tableau d'entiers.
     * La taille de la sÈquence A.
